@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>regis </title>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================--> 
+ <link rel="icon" type="image/png" href="/icons/favicon.ico"/>
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/animate/animate.css">
+<!--===============================================================================================--> 
+ <link rel="stylesheet" type="text/css" href="/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/select2/select2.min.css">
+<!--===============================================================================================--> 
+ <link rel="stylesheet" type="text/css" href="/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+ <link rel="stylesheet" type="text/css" href="/util.css">
+ <link rel="stylesheet" type="text/css" href="/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+ 
+ <div class="limiter">
+  <div class="container-login100">
+   <div class="wrap-login100">
+    <form class="login100-form validate-form p-l-55 p-r-55 p-t-178" action="/regis" method="POST">
+     <span class="login100-form-title">
+      REGISTER
+     </span>
+
+     <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
+      <input class="input100" type="text" name="username_user" placeholder="username" required>
+      <span class="focus-input100"></span>
+     </div>
+
+     <div class="wrap-input100 validate-input m-b-16" data-validate = "Please enter password">
+      <input class="input100" type="text" name="email_user" placeholder="email" required>
+      <span class="focus-input100"></span>
+     </div>
+
+     <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Password">
+                        <input class="input100" type="text" name="phone_user" placeholder="phone"required>
+                        <span class="focus-input100"></span>
+                    </div>
+
+     <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter Password">
+                        <input class="input100" type="password" name="password_user" placeholder="password"required>
+                        <span class="focus-input100"></span>
+     </div>
+     
+     
+     <!-- <input type="file" class="input" name="loginimg" placeholder="loginimg"required>
+     <span class="focus-input100"></span>
+     <div class="text-right p-t-13 p-b-23">
+       -->
+
+     <div class="container-login100-form-btn">
+      <button class="login100-form-btn" type="submit">
+       REGISTER
+      </button>
+     </div>
+
+     <div class="flex-col-c p-t-90 p-b-40">
+      <span class="txt1 p-b-9">
+       account ?
+      </span>
+
+      <a href="member" class="txt3">
+       LOGIN
+      </a>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+ 
+ 
+<!--===============================================================================================-->
+ <script src="/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+ <script src="/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+ <script src="/bootstrap/js/popper.js"></script>
+ <script src="/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+ <script src="/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+ <script src="/daterangepicker/moment.min.js"></script>
+ <script src="/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+ <script src="/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+ <script src="/loginmain.js"></script>
+
+</body>
+<script>
+ (function(){
+  $('#carouselABC').carousel({ interval: 3600 });
+  }());
+  
+  (function(){
+   $('.carousel-showmanymoveone .item').each(function(){
+    var itemToClone = $(this);
+    
+    for (var i=1;i<4;i++) {
+     itemToClone = itemToClone.next();
+     // wrap around if at end of item collection
+     
+     if (!itemToClone.length) {
+      itemToClone = $(this).siblings(':first');
+      }
+      // grab item, clone, add marker class, add to collection
+      
+      itemToClone.children(':first-child').clone()
+      .addClass("cloneditem-"+(i))
+      .appendTo($(this));
+      }
+      });
+      }());
+</script>
+</html>
